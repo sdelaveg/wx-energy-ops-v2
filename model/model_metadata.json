@@ -1,0 +1,28 @@
+{
+  "model_name": "BBVA_HVAC_Overconsumption_Classifier",
+  "model_version": "v2.0-champion-rf",
+  "release_tag": "v1.0.0",
+  "author": "Sergio Eduardo de la Vega Herrera",
+  "optimal_threshold": 0.3,
+  "physical_p80_threshold_kwh_m2": 66.64,
+  "cost_fn_usd": 2500.0,
+  "cost_fp_usd": 250.0,
+  "features": [
+    "Compacidad_Relativa",
+    "Area_Superficie",
+    "Area_Pared",
+    "Area_Techo",
+    "Altura_Total",
+    "Orientacion",
+    "Area_Acristalamiento",
+    "Distribucion_Acristalamiento"
+  ],
+  "test_metrics_u30": {
+    "roc_auc": 0.9785,
+    "recall": 0.871,
+    "precision": 0.8438,
+    "f1_score": 0.8571,
+    "f2_score": 0.8654,
+    "brier_score": 0.0529
+  }
+}

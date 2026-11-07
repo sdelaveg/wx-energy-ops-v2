@@ -1,0 +1,23 @@
+name: MLOps CI - Build & Pytest
+on:
+  push:
+    branches: [ main ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run Automated Pytest Suite (10 tests)
+        run: pytest -v tests/test_api_and_model.py
+      - name: Build Docker Image (wx-energy-ops:v1.0.0)
+        run: docker build -t wx-energy-ops:v1.0.0 .

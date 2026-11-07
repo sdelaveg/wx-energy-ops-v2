@@ -1,0 +1,10 @@
+ID_Caso,Tipo_Prueba,HTTP_Status,Prob_Critico,Pred_Clase,Impacto_OPEX_USD,Estado
+F1_Valido_Normal,Funcional Válido,200,0.0000,0,Inspección=$0.0 | Neto=$0.0,PASS
+F2_Valido_Critico,Funcional Válido,200,0.9804,1,Inspección=$250.0 | Neto=$2201.01,PASS
+F3_Valido_Sensibilidad_u30,Funcional Válido,200,0.4081,1,Inspección=$250.0 | Neto=$770.35,PASS
+F4_Valido_Frontera_ID119,Funcional Válido,200,0.9103,1,Inspección=$250.0 | Neto=$2025.78,PASS
+E1_Extremo_Limite_SinVentanas,Extremo: Valor Límite,200,0.0046,0,Inspección=$0.0 | Neto=$0.0,PASS
+E2_Extremo_Geometria_Contradictoria,Extremo: Combinación Inusual,200,0.3555,1,Inspección=$250.0 | Neto=$638.83,PASS
+E3_Extremo_Fuera_De_Rango,Extremo: Fuera de Rango,422,N/A (Bloqueado),Error 422,Pydantic Guard: Input should be greater than 300,PASS (Controlado)
+E4_Extremo_Campo_Faltante,Extremo: Campo Faltante,422,N/A (Bloqueado),Error 422,Pydantic Guard: Field required,PASS (Controlado)
+E5_Extremo_Tipo_Incorrecto,Extremo: Tipo Incorrecto,422,N/A (Bloqueado),Error 422,"Pydantic Guard: Input should be a valid number, unable",PASS (Controlado)
